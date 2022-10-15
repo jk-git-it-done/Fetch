@@ -29,9 +29,9 @@ public class Fetch {
 
                 if(file.exists()){
                     last_fetch = simpleDateFormat.format(file.lastModified());
+                    file.delete();
                 }
 
-                file.delete();
                 file.createNewFile();
 
                 FileWriter fileWriter = new FileWriter(file.getAbsoluteFile());
